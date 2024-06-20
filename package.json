@@ -1,0 +1,25 @@
+{
+  "name": "koishi-plugin-database-console",
+  "description": "",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "devDependencies": {
+    "@koishijs/client": "^5.29.2"
+  },
+  "peerDependencies": {
+    "@koishijs/plugin-console": "^5.29.2",
+    "koishi": "^4.17.9"
+  }
+}
