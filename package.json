@@ -1,25 +1,44 @@
 {
   "name": "koishi-plugin-database-console",
-  "description": "",
-  "version": "0.0.1",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "description": "Database Service for Console Plugins",
+  "version": "0.2.0",
+  "main": "lib/index.cjs",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "lib",
-    "dist"
+    "dist",
+    "src"
   ],
+  "author": "Hieuzest <girkirin@hotmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koikirin/koishi-plugin-database-console.git"
+  },
+  "homepage": "https://github.com/koikirin/koishi-plugin-database-console",
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
   "devDependencies": {
-    "@koishijs/client": "^5.29.2"
+    "@koishijs/client": "^5.29.4"
   },
   "peerDependencies": {
-    "@koishijs/plugin-console": "^5.29.2",
-    "koishi": "^4.17.9"
+    "@koishijs/plugin-console": "^5.29.4",
+    "koishi": "^4.18.0",
+    "minato": "^3.6.0"
+  },
+  "dependencies": {
+    "@koishijs/console": "^5.29.4",
+    "cosmokit": "^1.6.2"
   }
 }
