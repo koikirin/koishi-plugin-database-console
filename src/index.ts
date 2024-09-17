@@ -70,7 +70,7 @@ class ConsoleDatabase extends Service {
       }
       const result = await (driver[action as any] as any)(...callargs)
       return result && serialize(result)
-    })
+    }, { authority: 4 })
   }
 }
 
