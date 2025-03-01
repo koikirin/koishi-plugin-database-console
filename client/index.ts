@@ -23,6 +23,7 @@ export class ConsoleDriver extends Driver<ConsoleDriver.Config> {
         const arg = args.shift() ?? ''
         const table = typeof arg === 'string' ? arg : getTable(arg)
         if (Selection.is(arg)) arg.tables = mapValues(arg.tables, _ => ({} as any))
+        // also apply to subquery Selections
         const result = await this.send(method, this.session, table, serialize(arg), ...Selection.is(arg) ? [] : args.map(serialize))
         return result && deserialize(result)
       }
